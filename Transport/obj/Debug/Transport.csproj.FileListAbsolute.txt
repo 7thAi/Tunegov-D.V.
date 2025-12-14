@@ -1,0 +1,14 @@
+C:\Transport\bin\Debug\Transport.exe.config
+C:\Transport\bin\Debug\Transport.exe
+C:\Transport\bin\Debug\Transport.pdb
+C:\Transport\obj\Debug\Transport.csproj.AssemblyReference.cache
+C:\Transport\obj\Debug\Transport.csproj.CoreCompileInputs.cache
+C:\Transport\obj\Debug\Transport.exe
+C:\Transport\obj\Debug\Transport.pdb
+C:\Users\Acer\Desktop\seventhAi\Transport\bin\Debug\Transport.exe.config
+C:\Users\Acer\Desktop\seventhAi\Transport\bin\Debug\Transport.exe
+C:\Users\Acer\Desktop\seventhAi\Transport\bin\Debug\Transport.pdb
+C:\Users\Acer\Desktop\seventhAi\Transport\obj\Debug\Transport.csproj.AssemblyReference.cache
+C:\Users\Acer\Desktop\seventhAi\Transport\obj\Debug\Transport.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\seventhAi\Transport\obj\Debug\Transport.exe
+C:\Users\Acer\Desktop\seventhAi\Transport\obj\Debug\Transport.pdb

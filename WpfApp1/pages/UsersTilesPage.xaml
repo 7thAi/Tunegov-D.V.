@@ -1,0 +1,86 @@
+﻿<Page x:Class="WpfApp1.Pages.UsersTilesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Пользователи (плитки)">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Панель управления -->
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+
+            <TextBox x:Name="TbSearch"
+                     Width="200"
+                     Margin="5"
+                     ToolTip="Поиск по логину"
+                     TextChanged="TbSearch_TextChanged"/>
+
+            <ComboBox x:Name="CbRole"
+                      Width="150"
+                      Margin="5"
+                      SelectionChanged="FilterChanged">
+                <ComboBoxItem Content="Все"/>
+                <ComboBoxItem Content="Администратор"/>
+                <ComboBoxItem Content="Пользователь"/>
+            </ComboBox>
+
+            <ComboBox x:Name="CbSort"
+                      Width="180"
+                      Margin="5"
+                      SelectionChanged="FilterChanged">
+                <ComboBoxItem Content="Без сортировки"/>
+                <ComboBoxItem Content="По ID ↑"/>
+                <ComboBoxItem Content="По ID ↓"/>
+                <ComboBoxItem Content="По логину A-Z"/>
+                <ComboBoxItem Content="По логину Z-A"/>
+            </ComboBox>
+
+        </StackPanel>
+
+        <!-- Плитки -->
+        <ScrollViewer Grid.Row="1">
+            <ListView x:Name="LvUsers">
+
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#4A90E2"
+                                BorderThickness="2"
+                                CornerRadius="10"
+                                Padding="10"
+                                Margin="10"
+                                Width="200">
+
+                            <StackPanel>
+
+                                <Image Height="100"
+                                        Stretch="UniformToFill"
+                                        Source="{Binding Photo,
+                                            TargetNullValue='pack://application:,,,/Resources/DefaultPhoto.png'}"/>
+
+
+                                <TextBlock Text="{Binding Login}"
+                                           FontWeight="Bold"
+                                           HorizontalAlignment="Center"
+                                           Margin="0 5 0 0"/>
+
+                                <TextBlock Text="{Binding Role}"
+                                           HorizontalAlignment="Center"/>
+
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</Page>
