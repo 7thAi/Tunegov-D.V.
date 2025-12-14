@@ -79,4 +79,4 @@
 
 1. Клонировать репозиторий:
    ```bash
-   git clone <ссылка на репозиторий>
+   git clone https://github.com/7thAi/Tunegov-D.V..git
